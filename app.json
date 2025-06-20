@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "SplitSmartPlus",
+    "slug": "splitsmartplus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.squartsplit.android",
+      "googleServicesFile":"./google-services.json"
+    },
+    "scheme": "splitsmartplus",
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ae19374d-74e6-42c9-b3af-4dea358205f1"
+      }
+    },
+    "owner": "my-project-86"
+  }
+}
