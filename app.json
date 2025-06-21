@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SplitSmartPlus",
-    "slug": "splitsmartplus",
+    "name": "SquardSplit",
+    "slug": "SquardSplit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,17 +15,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.squardsplit.ios"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.squartsplit.android",
-      "googleServicesFile":"./google-services.json"
+      "package": "com.squardsplit.android"
     },
-    "scheme": "splitsmartplus",
+    "scheme": "SquardSplit",
     "web": {
       "favicon": "./assets/favicon.png"
     },
@@ -34,6 +34,11 @@
         "projectId": "ae19374d-74e6-42c9-b3af-4dea358205f1"
       }
     },
-    "owner": "my-project-86"
+    "owner": "my-project-86",
+    "googleSignIn": {
+      "webClientId": "YOUR_WEB_CLIENT_ID_FROM_FIREBASE_GOOGLE_AUTH",
+      "iosClientId": "YOUR_IOS_CLIENT_ID_FROM_FIREBASE_GOOGLE_AUTH",
+      "androidClientId": "YOUR_ANDROID_CLIENT_ID_FROM_FIREBASE_GOOGLE_AUTH"
+    }
   }
 }
