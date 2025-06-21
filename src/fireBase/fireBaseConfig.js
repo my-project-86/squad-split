@@ -1,7 +1,8 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
+import { getAuth, initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 // import logger from './utils/logger';
 
 // --- Firebase configuration ---
@@ -38,10 +39,15 @@ try {
   throw error;
 }
 
-// --- Get Auth and Firestore instances with persistent storage ---
-const auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(AsyncStorage)
-});
+// --- Get Auth and Firestore instances with correct persistence ---
+let auth;
+if (Platform.OS !== 'web') {
+  auth = initializeAuth(app, {
+    persistence: getReactNativePersistence(AsyncStorage)
+  });
+} else {
+  auth = getAuth(app);
+}
 const db = getFirestore(app);
 
 console.log("Firebase Auth and Firestore instances initialized.");
